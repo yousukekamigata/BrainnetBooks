@@ -4,30 +4,30 @@ import java.sql.Date;
 import java.sql.Timestamp;
 
 public class Book {
-	public Book(String isbn, String book_name, String author_name,
-			String publisher_name, short price, Date release_date,
-			short category_id, Timestamp modify_datetime,
-			Timestamp create_datetime) {
+	public Book(String isbn, String bookName, String authorName,
+			String publisherName, short price, Date releaseDate,
+			short categoryId, Timestamp modifyDatetime,
+			Timestamp createDatetime) {
 		super();
 		this.isbn = isbn;
-		this.book_name = book_name;
-		this.author_name = author_name;
-		this.publisher_name = publisher_name;
+		this.bookName = bookName;
+		this.authorName = authorName;
+		this.publisherName = publisherName;
 		this.price = price;
-		this.release_date = release_date;
-		this.category_id = category_id;
-		this.modify_datetime = modify_datetime;
-		this.create_datetime = create_datetime;
+		this.releaseDate = releaseDate;
+		this.categoryId = categoryId;
+		this.modifyDatetime = modifyDatetime;
+		this.createDatetime = createDatetime;
 	}
 	private String isbn;
-	private String book_name;
-	private String author_name;
-	private String publisher_name;
+	private String bookName;
+	private String authorName;
+	private String publisherName;
 	private short price;
-	private java.sql.Date release_date;
-	private short category_id;
-	private java.sql.Timestamp modify_datetime;
-	private java.sql.Timestamp create_datetime;
+	private java.sql.Date releaseDate;
+	private short categoryId;
+	private java.sql.Timestamp modifyDatetime;
+	private java.sql.Timestamp createDatetime;
 	public String getIsbn() {
 		return isbn;
 	}
@@ -35,22 +35,22 @@ public class Book {
 		this.isbn = isbn;
 	}
 	public String getBook_name() {
-		return book_name;
+		return bookName;
 	}
-	public void setBook_name(String book_name) {
-		this.book_name = book_name;
+	public void setBook_name(String bookName) {
+		this.bookName = bookName;
 	}
 	public String getAuthor_name() {
-		return author_name;
+		return authorName;
 	}
-	public void setAuthor_name(String author_name) {
-		this.author_name = author_name;
+	public void setAuthor_name(String authorName) {
+		this.authorName = authorName;
 	}
 	public String getPublisher_name() {
-		return publisher_name;
+		return publisherName;
 	}
-	public void setPublisher_name(String publisher_name) {
-		this.publisher_name = publisher_name;
+	public void setPublisher_name(String publisherName) {
+		this.publisherName = publisherName;
 	}
 	public short getPrice() {
 		return price;
@@ -59,27 +59,27 @@ public class Book {
 		this.price = price;
 	}
 	public java.sql.Date getRelease_date() {
-		return release_date;
+		return releaseDate;
 	}
-	public void setRelease_date(java.sql.Date release_date) {
-		this.release_date = release_date;
+	public void setRelease_date(java.sql.Date releaseDate) {
+		this.releaseDate = releaseDate;
 	}
 	public short getCategory_id() {
-		return category_id;
+		return categoryId;
 	}
-	public void setCategory_id(short category_id) {
-		this.category_id = category_id;
+	public void setCategory_id(short categoryId) {
+		this.categoryId = categoryId;
 	}
 	public java.sql.Timestamp getModify_datetime() {
-		return modify_datetime;
+		return modifyDatetime;
 	}
-	public void setModify_datetime(java.sql.Timestamp modify_datetime) {
-		this.modify_datetime = modify_datetime;
+	public void setModify_datetime(java.sql.Timestamp modifyDatetime) {
+		this.modifyDatetime = modifyDatetime;
 	}
 	public java.sql.Timestamp getCreate_datetime() {
-		return create_datetime;
+		return createDatetime;
 	}
-	public void setCreate_datetime(java.sql.Timestamp create_datetime) {
-		this.create_datetime = create_datetime;
+	public void setCreate_datetime(java.sql.Timestamp createDatetime) {
+		this.createDatetime = createDatetime;
 	}
 }
