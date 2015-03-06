@@ -1,14 +1,10 @@
 package model;
 
-import java.sql.Date;
-import java.sql.Timestamp;
+
 
 public class Book {
-	public Book(String isbn, String bookName, String authorName,
-			String publisherName, short price, Date releaseDate,
-			short categoryId, Timestamp modifyDatetime,
-			Timestamp createDatetime) {
-		super();
+
+	public Book(String isbn, String bookName) {
 		this.isbn = isbn;
 		this.bookName = bookName;
 		this.authorName = authorName;
@@ -34,22 +30,22 @@ public class Book {
 	public void setIsbn(String isbn) {
 		this.isbn = isbn;
 	}
-	public String getBook_name() {
+	public String getBookName() {
 		return bookName;
 	}
-	public void setBook_name(String bookName) {
+	public void setBookName(String bookName) {
 		this.bookName = bookName;
 	}
-	public String getAuthor_name() {
+	public String getAuthorName() {
 		return authorName;
 	}
-	public void setAuthor_name(String authorName) {
+	public void setAuthorName(String authorName) {
 		this.authorName = authorName;
 	}
-	public String getPublisher_name() {
+	public String getPublisherName() {
 		return publisherName;
 	}
-	public void setPublisher_name(String publisherName) {
+	public void setPublisherName(String publisherName) {
 		this.publisherName = publisherName;
 	}
 	public short getPrice() {
@@ -58,28 +54,28 @@ public class Book {
 	public void setPrice(short price) {
 		this.price = price;
 	}
-	public java.sql.Date getRelease_date() {
+	public java.sql.Date getReleaseDate() {
 		return releaseDate;
 	}
-	public void setRelease_date(java.sql.Date releaseDate) {
+	public void setReleaseDate(java.sql.Date releaseDate) {
 		this.releaseDate = releaseDate;
 	}
-	public short getCategory_id() {
+	public short getCategoryId() {
 		return categoryId;
 	}
-	public void setCategory_id(short categoryId) {
+	public void setCategoryId(short categoryId) {
 		this.categoryId = categoryId;
 	}
-	public java.sql.Timestamp getModify_datetime() {
+	public java.sql.Timestamp getModifyDatetime() {
 		return modifyDatetime;
 	}
-	public void setModify_datetime(java.sql.Timestamp modifyDatetime) {
+	public void setModifyDatetime(java.sql.Timestamp modifyDatetime) {
 		this.modifyDatetime = modifyDatetime;
 	}
-	public java.sql.Timestamp getCreate_datetime() {
+	public java.sql.Timestamp getCreateDatetime() {
 		return createDatetime;
 	}
-	public void setCreate_datetime(java.sql.Timestamp createDatetime) {
+	public void setCreateDatetime(java.sql.Timestamp createDatetime) {
 		this.createDatetime = createDatetime;
 	}
 }
