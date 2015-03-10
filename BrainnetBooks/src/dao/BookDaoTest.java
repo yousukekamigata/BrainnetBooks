@@ -1,17 +1,21 @@
 package dao;
 
+import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.MatcherAssert.*;
+
+import java.awt.print.Book;
+import java.util.List;
+
 import org.junit.Test;
 
 public class BookDaoTest {
-	private BookDAO bookdao;
 
 	@Test
-	public void BookDAO(){
-		bookdao = new BookDAO();
-		BookDAO();
-	}
-	@Test void transfer(){
-		
-	}
+	public void BookDAO() {
+		BookDAO b = new BookDAO();
+		List<Book> books = b.findAll();
 
+		// 結果がnullでないこと
+		assertThat(books, notNullValue());
+	}
 }

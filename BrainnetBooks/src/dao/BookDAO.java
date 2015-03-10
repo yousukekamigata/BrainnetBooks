@@ -10,10 +10,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BookDAO {
+	@SuppressWarnings("unused")
 	public List<Book> findAll() {
 
 		Connection conn = null;
-		List<Book> bookList = new ArrayList<Book>();
+		List<Book> books = new ArrayList<Book>();
 
 		try {
 			// JDBCドライバを読み込み
@@ -46,7 +47,8 @@ public class BookDAO {
 				java.sql.Timestamp modifyDatetime = rs.getTimestamp("modifyDatetime");
 				java.sql.Timestamp createDatetime = rs.getTimestamp("createDatetime");
 				Book book = new Book();
-				bookList.add(book);
+				books.add(book);
+
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -65,6 +67,6 @@ public class BookDAO {
 				}
 			}
 		}
-		return bookList;
+		return books;
 	}
 }
