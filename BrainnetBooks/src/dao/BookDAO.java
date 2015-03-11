@@ -1,6 +1,6 @@
 package dao;
 
-import java.awt.print.Book;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -9,8 +9,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import model.Book;
+
 public class BookDAO {
-	@SuppressWarnings("unused")
 	public List<Book> findAll() {
 
 		Connection conn = null;
@@ -26,9 +27,7 @@ public class BookDAO {
 					"kamigatapass");
 
 			// SELECT文を準備
-			String sql = "SElECT isbn,bookName,authorName,"
-					+ "publisherName,price,releaseDate,"
-					+ "categoryId,modifyDatetime,createDatetime";
+			String sql = "SElECT * FROM book";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SELECTを実行し、結果表を取得
@@ -37,15 +36,15 @@ public class BookDAO {
 			// 結果表に格納レコードの内容を
 			// Bookインスタンスに設定し、ArrayListインスタンスに追加
 			while (rs.next()) {
-				String isbn = rs.getString("isbn");
-				String bookName = rs.getString("bookName");
-				String authorName = rs.getString("authorName");
-				String publisherName = rs.getString("publisherName");
-				Short price = rs.getShort("price");
-				java.sql.Date releaseDate = rs.getDate("releaseDate");
-				Short categoryId = rs.getShort("categoryId");
-				java.sql.Timestamp modifyDatetime = rs.getTimestamp("modifyDatetime");
-				java.sql.Timestamp createDatetime = rs.getTimestamp("createDatetime");
+				rs.getString("isbn");
+				rs.getString("bookName");
+				rs.getString("authorName");
+				rs.getString("publisherName");
+				rs.getShort("price");
+				rs.getDate("releaseDate");
+				rs.getShort("categoryId");
+				rs.getTimestamp("modifyDatetime");
+				rs.getTimestamp("createDatetime");
 				Book book = new Book();
 				books.add(book);
 

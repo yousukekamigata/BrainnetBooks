@@ -4,7 +4,11 @@ package model;
 
 public class Book {
 
-	public Book(String isbn, String bookName) {
+	public Book(String isbn, String bookName,String authorName,
+			String publisherName,short price,java.sql.Date releaseDate,
+			short categoryId,java.sql.Timestamp modifyDatetime,
+			java.sql.Timestamp createDatetime,String getIsbn) {
+
 		this.isbn = isbn;
 		this.bookName = bookName;
 		this.authorName = authorName;
@@ -14,6 +18,11 @@ public class Book {
 		this.categoryId = categoryId;
 		this.modifyDatetime = modifyDatetime;
 		this.createDatetime = createDatetime;
+	}
+
+
+	public Book() {
+		// TODO 自動生成されたコンストラクター・スタブ
 	}
 	private String isbn;
 	private String bookName;
